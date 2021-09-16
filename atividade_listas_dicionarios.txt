@@ -1,0 +1,387 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Vinicius_Teixeira_atividade_listas_dicionarios_corrigido",
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rLoDvObdGiPW"
+      },
+      "source": [
+        "# Atividade\n",
+        "### Entrega: 16/Set\n",
+        "### Valor: 100 pontos\n",
+        "\n",
+        "### Utilizando os dados a seguir, mostre os resultados de **forma individual** para cada curso sendo:\n",
+        "\n",
+        "* Menor nota\n",
+        "* Maior nota\n",
+        "* Média das notas\n",
+        "\n",
+        "~~~\n",
+        "Vinicius Teixeira Santos RA: 420111663\n",
+        "~~~"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ER3woJq1Gxer"
+      },
+      "source": [
+        "# Dados\n",
+        "alunos = []\n",
+        "alunos.append({'nome': 'Aluno 01', 'curso': 'Engenharia de Software', 'AV1':8 })\n",
+        "alunos.append({'nome': 'Aluno 02', 'curso': 'Gestão de TI', 'AV1':7 })\n",
+        "alunos.append({'nome': 'Aluno 03', 'curso': 'Gestão de TI', 'AV1':6 })\n",
+        "alunos.append({'nome': 'Aluno 04', 'curso': 'Gestão de TI', 'AV1':6 })\n",
+        "alunos.append({'nome': 'Aluno 05', 'curso': 'Gestão de TI', 'AV1':6 })\n",
+        "alunos.append({'nome': 'Aluno 06', 'curso': 'Ciência de Dados', 'AV1':7 })\n",
+        "alunos.append({'nome': 'Aluno 07', 'curso': 'Ciência de Dados', 'AV1':9 })\n",
+        "alunos.append({'nome': 'Aluno 08', 'curso': 'Engenharia de Software', 'AV1':10 })\n",
+        "alunos.append({'nome': 'Aluno 09', 'curso': 'Engenharia de Software', 'AV1':10 })\n",
+        "alunos.append({'nome': 'Aluno 10', 'curso': 'Engenharia de Software', 'AV1':4 })\n",
+        "alunos.append({'nome': 'Aluno 11', 'curso': 'Ciência de Dados', 'AV1':5 })\n",
+        "alunos.append({'nome': 'Aluno 11', 'curso': 'Ciência de Dados', 'AV1':5 })\n",
+        "alunos.append({'nome': 'Aluno 12', 'curso': 'Ciência de Dados', 'AV1':9 })\n",
+        "alunos.append({'nome': 'Aluno 13', 'curso': 'Ciência de Dados', 'AV1':9 })\n",
+        "alunos.append({'nome': 'Aluno 14', 'curso': 'Engenharia de Software', 'AV1': 7})\n",
+        "alunos.append({'nome': 'Aluno 15', 'curso': 'Ciência de Dados', 'AV1':7})\n",
+        "alunos.append({'nome': 'Aluno 16', 'curso': 'Engenharia de Software', 'AV1': 6})\n",
+        "alunos.append({'nome': 'Aluno 17', 'curso': 'Ciência de Dados', 'AV1':8 })\n",
+        "alunos.append({'nome': 'Aluno 18', 'curso': 'Engenharia de Software', 'AV1':4 })\n",
+        "alunos.append({'nome': 'Aluno 19', 'curso': 'Gestão de TI', 'AV1':2 })\n",
+        "alunos.append({'nome': 'Aluno 20', 'curso': 'Ciência de Dados', 'AV1':9 })"
+      ],
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-mt9Dcg5IM3X"
+      },
+      "source": [
+        "## Resolução"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9PPbVpL2G9nU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "32fec11b-b8e5-4c12-d30a-c72459e818a4"
+      },
+      "source": [
+        "# Notas Gerais\n",
+        "# desenvolver aqui o código\n",
+        "\n",
+        "notas = []\n",
+        "for aluno in alunos:\n",
+        "    notas.append(aluno['AV1'])\n",
+        "\n",
+        "print('A Maior nota é......:', max(notas))\n",
+        "print('A Menor nota é......:', min(notas))\n",
+        "print('A Média das nota é..:', round(sum(notas)/len(notas),2))\n",
+        "\n",
+        "# Saída\n",
+        "# A Maior nota é.....: 10\n",
+        "# A Menor nota é.....: 2\n",
+        "# A Média das notas é: 6.86"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A Maior nota é......: 10\n",
+            "A Menor nota é......: 2\n",
+            "A Média das notas é..: 6.86\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HODtGJzRIUor",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c9db5115-9e10-47df-a592-f93ba14b6745"
+      },
+      "source": [
+        "# Engenharia de Software\n",
+        "# desenvolver aqui o código\n",
+        "\n",
+        "notasCC = []\n",
+        "for aluno in alunos:\n",
+        "  if aluno['curso'] == 'Ciências da Computação':\n",
+        "    notasCC.append(aluno['AV1'])\n",
+        "\n",
+        "print('A Maior notas é......:', max(notasCC))\n",
+        "print('A Menor notas é......:', min(notasCC))\n",
+        "print('A Média das notas é..:', round(sum(notasCC)/len(notasCC),2))\n",
+        "\n",
+        "# Saída\n",
+        "# A Maior nota é.....: 10\n",
+        "# A Menor nota é.....: 4\n",
+        "# A Média das notas é: 7.0"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A Maior nota é......: 10\n",
+            "A Menor nota é......: 4\n",
+            "A Média das nota é..: 7.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qm7o9uJLIV7V",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7c6416f6-888b-4dfa-c9e6-64021686cc2f"
+      },
+      "source": [
+        "# Ciência de Dados\n",
+        "# desenvolver aqui o código\n",
+        "\n",
+        "notasADS = []\n",
+        "for aluno in alunos:\n",
+        "  if aluno['curso'] == 'Ciência de Dados':\n",
+        "    notasADS.append(aluno['AV1'])\n",
+        "\n",
+        "print('A Maior nota é......:', max(notasADS))\n",
+        "print('A Menor nota é......:', min(notasADS))\n",
+        "print('A Média das notas é..:', round(sum(notasADS)/len(notasADS),2))\n",
+        "\n",
+        "# Saída\n",
+        "# A Maior nota é.....: 9\n",
+        "# A Menor nota é.....: 5\n",
+        "# A Média das notas é: 7.56"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A Maior nota é ......: 9\n",
+            "A Menor nota é .....: 5\n",
+            "A Média das notas é ..: 7.56\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "1e3oVnYTIV-N",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3074e43a-e952-4ff4-955e-9aebe5907fd4"
+      },
+      "source": [
+        "# Gestão de TI\n",
+        "# desenvolver aqui o código\n",
+        "notasSI = []\n",
+        "for aluno in alunos:\n",
+        "  if aluno['curso'] == 'Gestão de TI':\n",
+        "    notasSI.append(aluno['AV1'])\n",
+        "\n",
+        "print('A Maior nota é ......:', max(notasSI))\n",
+        "print('A Menor nota é ......:', min(notasSI))\n",
+        "print('A Média das notas é ..:', round(sum(notasSI)/len(notasSI),2))\n",
+        "# Saída\n",
+        "# A Maior nota é ....: 7\n",
+        "# A Menor nota é .....: 2\n",
+        "# A Média das notas é : 5.4"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A Maior nota é ......: 7\n",
+            "A Menor nota é ......: 2\n",
+            "A Média das notas é ..: 5.4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FIzo4z_dHl6l"
+      },
+      "source": [
+        "### Desenvolva um algoritmo que permita mostrar **de uma só vez** os resultados do exercício anterior para cada curso."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eWT5OxUFJeX-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cb4c1b54-82ac-43b5-e9b1-676f14cafcba"
+      },
+      "source": [
+        "# Resolução\n",
+        "# desenvolver aqui o código\n",
+        "\n",
+        "notasCC = []\n",
+        "notasADS = []\n",
+        "notasSI = []\n",
+        "\n",
+        "for aluno in alunos:\n",
+        "  if aluno['curso'] == 'Ciência de Dados':\n",
+        "    notasADS.append(aluno['AV1'])\n",
+        "  elif aluno['curso'] == 'Engenharia de Software': \n",
+        "    notasCC.append(aluno['AV1']) \n",
+        "  elif aluno['curso'] == 'Gestão de TI':\n",
+        "    notasSI.append(aluno['AV1'])  \n",
+        "\n",
+        "\n",
+        "# Saída\n",
+        "# Curso: Ciência de Dados [7, 9, 5, 5, 9, 9, 7, 8, 9]\n",
+        "# A Maior nota é .....: 9\n",
+        "# A Menor nota é .....: 5\n",
+        "# A Média das notas é : 7.56\n",
+        "\n",
+        "print('........................................................................')\n",
+        "print('Curso: Ciência de Dados', notasADS)\n",
+        "print('A Maior nota é......:', max(notasADS))\n",
+        "print('A Menor nota é......:', min(notasADS))\n",
+        "print('A Média das notas é ..:', round(sum(notasADS)/len(notasADS),2))\n",
+        "print('........................................................................')\n",
+        "\n",
+        "# Curso: Engenharia de Software [8, 10, 10, 4, 7, 6, 4]\n",
+        "# A Maior nota é .....: 10\n",
+        "# A Menor nota é .....: 4\n",
+        "# A Média das notas é : 7.0\n",
+        "\n",
+        "print('Curso: CEngenharia de Software', notasCC)\n",
+        "print('A Maior nota é ......:', max(notasCC))\n",
+        "print('A Menor nota é ......:', min(notasCC))\n",
+        "print('A Média das nota é ..:', round(sum(notasCC)/len(notasCC),2))\n",
+        "print('........................................................................')\n",
+        "\n",
+        "# Curso: Gestão de TI [7, 6, 6, 6, 2]\n",
+        "# A Maior nota é .....: 7\n",
+        "# A Menor nota é .....: 2\n",
+        "# A Média das notas é : 5.4\n",
+        "\n",
+        "print('Curso: Gestão de TI', notasSI)\n",
+        "print('A Maior nota é ......:', max(notasSI))\n",
+        "print('A Menor nota é ......:', min(notasSI))\n",
+        "print('A Média das notas é ..:', round(sum(notasSI)/len(notasSI),2))\n",
+        "print('........................................................................')"
+      ],
+      "execution_count": 255,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "........................................................................\n",
+            "Curso: Ciência de Dados [7, 9, 5, 5, 9, 9, 7, 8, 9]\n",
+            "A Maior nota é ......: 9\n",
+            "A Menor nota é ......: 5\n",
+            "A Média das notas é ..: 7.56\n",
+            "........................................................................\n",
+            "Curso: Engenharia de Software [8, 10, 10, 4, 7, 6, 4]\n",
+            "A Maior nota é ......: 10\n",
+            "A Menor nota é ......: 4\n",
+            "A Média das notas é ..: 7.0\n",
+            "........................................................................\n",
+            "Curso: Gestão de TI [7, 6, 6, 6, 2]\n",
+            "A Maior nota é ......: 7\n",
+            "A Menor nota é ......: 2\n",
+            "A Média das notas é ..: 5.4\n",
+            "........................................................................\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "r3Q4jlLaqae9",
+        "outputId": "8c26df64-cd82-4d6c-ed0a-84f8b4425a86"
+      },
+      "source": [
+        "# Consigo resolver apenas usando collections \n",
+        "\n",
+        "from collections import defaultdict\n",
+        "\n",
+        "res = defaultdict(list)\n",
+        "\n",
+        "for v in alunos: \n",
+        "  res[v['curso']].append(v['AV1'])\n",
+        "\n",
+        "for curso in res.items():\n",
+        "  print('Curso:', curso[0], curso[1])\n",
+        "  print('A Maior nota é ......:', max(curso[1]))\n",
+        "  print('A Menor nota é ......:', min(curso[1]))\n",
+        "  print('A Média das notas é ..:', round(sum(curso[1])/len(curso[1]),2))\n",
+        "  print('........................................................................')\n"
+      ],
+      "execution_count": 254,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Curso: Engenharia de Software [8, 10, 10, 4, 7, 6, 4]\n",
+            "A Maior nota é ......: 10\n",
+            "A Menos nota é ......: 4\n",
+            "A Média das notas é ..: 7.0\n",
+            "........................................................................\n",
+            "Curso: Gestão de TI [7, 6, 6, 6, 2]\n",
+            "A Maior nota é ......: 7\n",
+            "A Menor nota é ......: 2\n",
+            "A Média das notas é ..: 5.4\n",
+            "........................................................................\n",
+            "Curso: Ciência de Dados [7, 9, 5, 5, 9, 9, 7, 8, 9]\n",
+            "A Maior nota é ......: 9\n",
+            "A Menonota é ......: 5\n",
+            "A Média das notas é ..: 7.56\n",
+            "........................................................................\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
